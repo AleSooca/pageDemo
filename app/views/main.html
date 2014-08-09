@@ -1,36 +1,31 @@
 <div class="header">
   <ul class="nav nav-pills pull-right">
-    <li class="active"><a ng-href="#">Home</a></li>
-    <li><a ng-href="#">About</a></li>
-    <li><a ng-href="#">Contact</a></li>
+    <li class="active"><a ng-href="#" class="active">MAP</a></li>
+    <li><a ng-href="#">LIST</a></li>
   </ul>
-  <h3 class="text-muted">pageDemo</h3>
+  <h3 class="text-muted">JUST-EAT Demo Page</h3>
 </div>
 
-<div class="jumbotron">
-  <h1>'Allo, 'Allo!</h1>
-  <p class="lead">
-    <img src="images/yeoman.png" alt="I'm Yeoman"><br>
-    Always a pleasure scaffolding your apps.
-  </p>
-  <p><a class="btn btn-lg btn-success" ng-href="#">Splendid!</a></p>
+<div class="rowlist">
+  <ul>
+    <li data-ng-repeat="row in data">
+      <div class="clearfix row">
+        <img data-ng-src="{{row.LogoUrl}}"/>
+        <h3>{{row.Name}}</h3>
+        <div class="info">
+          <p></p>
+          <div rating="4" class="stars"></div>
+          <p class="reviews">({{row.ratings.number}})</p>
+          <p class="distance">{{row.distance}}</p>
+        <div>
+      </div>
+    </li>
+  </ul>    
 </div>
 
-<div class="row marketing">
-  <h4>HTML5 Boilerplate</h4>
-  <p>
-    HTML5 Boilerplate is a professional front-end template for building fast, robust, and adaptable web apps or sites.
-  </p>
 
-  <h4>Angular</h4>
-  <p>
-    AngularJS is a toolset for building the framework most suited to your application development.
-  </p>
-
-  <h4>Karma</h4>
-  <p>Spectacular Test Runner for JavaScript.</p>
-</div>
 
 <div class="footer">
-  <p>♥ from the Yeoman team</p>
+  <p>_Alz</p>
 </div>
+<!--p><a class="btn btn-lg btn-success" ng-href="#">Splendid!</a></p-->

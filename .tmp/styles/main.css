@@ -1,13 +1,17 @@
 /* Space out content a bit */
+
 body {
   padding-top: 20px;
   padding-bottom: 20px;
 }
+
 li {
   text-decoration: none;
   list-style-type: none;
 }
+
 /* Everything but the rowlist gets side spacing for mobile first views */
+
 .header,
 .marketing,
 .footer {
@@ -16,10 +20,13 @@ li {
 }
 
 /* Custom page header */
+
 .header {
   border-bottom: 1px solid #e5e5e5;
 }
+
 /* Make the masthead heading the same height as the navigation */
+
 .header h3 {
   margin-top: 0;
   margin-bottom: 0;
@@ -28,6 +35,7 @@ li {
 }
 
 /* Custom page footer */
+
 .footer {
   padding-top: 19px;
   color: #777;
@@ -35,60 +43,78 @@ li {
 }
 
 /* Customize container */
+
 @media (min-width: 768px) {
   .container {
     max-width: 730px;
   }
 }
+
 .container-narrow > hr {
   margin: 30px 0;
 }
 
 /* Main marketing message and sign up button */
+
 .rowlist {
   text-align: center;
   border-bottom: 1px solid #e5e5e5;
   padding-left: 15px;
   padding-right: 15px;
 }
+
 .rowlist .btn {
   font-size: 21px;
   padding: 14px 24px;
 }
 
 /* Responsive: Portrait tablets and up */
+
 @media screen and (min-width: 768px) {
   /* Remove the padding we set earlier */
+
   .header,
   .marketing,
   .footer {
     padding-left: 0;
     padding-right: 0;
   }
+
   /* Space out the masthead */
+
   .header {
     margin-bottom: 30px;
   }
+
   /* Remove the bottom border on the rowlist for visual effect */
+
   .rowlist {
     border-bottom: 0;
   }
-  .rowlist img{
-    float:left;
-  }
-  .row {
-    padding-top:2px;
-    border:1px solid #e5e5e5;;
-  }
-  .reviews {
-    font-weight:bold;
-  }
-  i[class^="fa "] {
-  font-family: 'FontAwesome' !important;
-  font-size: inherit;
-}
-  .fa-star.watch {color: #fc0;}
-  .fa-star.rated {color: #f48120}
-}
 
+  .rowlist img {
+    float: left;
+  }
+
+  .row {
+    padding-top: 2px;
+    border: 1px solid #e5e5e5;
+  }
+
+  .reviews {
+    font-weight: bold;
+  }
+
+  i[class^="fa "] {
+    font-family: 'FontAwesome' !important;
+    font-size: inherit;
+  }
+
+  .fa-star.watch {
+    color: #fc0;
+  }
+
+  .fa-star.rated {
+    color: #f48120;
+  }
 }

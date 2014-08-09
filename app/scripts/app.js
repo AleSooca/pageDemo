@@ -5,7 +5,7 @@ angular.module('pageDemoApp', [
   'ngResource',
   'ngSanitize',
   'ngRoute'
-])
+  ])
   .config(function ($routeProvider) {
     $routeProvider
       .when('/', {
