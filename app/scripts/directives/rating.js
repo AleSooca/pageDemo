@@ -11,8 +11,10 @@ angular.module('pageDemoApp')
 				$scope.rated = function(i) {
 					return i <  parseFloat($scope.rating)
 				};
+				$scope.half = function(i){
+					return (parseFloat($scope.rating) - parseInt($scope.rating) != 0) && (i == parseInt($scope.rating));
+				}
 			}
 
 		};
 	});
-
