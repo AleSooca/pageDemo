@@ -8,7 +8,8 @@ angular.module('pageDemoApp')
         $http.get('/data.json')
         .success(function(response, status, headers, config){
             $scope.data = response.Details;
-            console.log ($scope.data)
+
+            console.log ($scope.data);
         });
     }();
     
@@ -57,6 +58,7 @@ angular.module('pageDemoApp')
       $scope.activeTab = tabIndex;
       if(tabIndex == 1 && !$scope.beenHere){
         $scope.initializeMap();
+        setMarkers($scope.data);
         $scope.beenHere = "yeah";
       }
     };
@@ -64,11 +66,30 @@ angular.module('pageDemoApp')
 
     $scope.initializeMap = function() {
       var mapelem = document.getElementById("map");
+      var latLong = new google.maps.LatLng(51.5362177, -0.0829855);
       var mapOptions = {
-      center: new google.maps.LatLng(51.5362177, -0.0829855),
-      zoom: 15
+      center: latLong,
+      zoom: 12
     };
-    var map = new google.maps.Map(mapelem, mapOptions);
+      $scope.map = new google.maps.Map(mapelem, mapOptions);
+      var marker = new google.maps.Marker({
+            position: latLong,
+            map: $scope.map,
+            title:"My Position"
+        });
+    }
+
+    var setMarkers = function(data){
+      for(var i=0; i<data.length; i++){
+        var myLatlng = new google.maps.LatLng(data[i].Address.Latitude,data[i].Address.Longitude);
+        
+        var marker = new google.maps.Marker({
+            position: myLatlng,
+            map: $scope.map,
+            animation: google.maps.Animation.DROP,
+            title:data[i].Name
+        });
+      }
     }
 
 

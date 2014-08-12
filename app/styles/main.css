@@ -6,6 +6,7 @@ body {
 li {
   text-decoration: none;
   list-style-type: none;
+  cursor:pointer;
 }
 
 .logo{
@@ -42,10 +43,8 @@ li {
 }
 
 .filterbox{
-  border:1px solid #ccc;
-  background-color:#dcdcdc;
-  height:95px;
   margin-left:15px;
+  margin-bottom:25px;
 }
 
 
@@ -154,7 +153,6 @@ i[class^="fa"] {
     padding-right: 0;
   }
 
-
   .filters{
     margin-left:-34px
   }
@@ -170,10 +168,6 @@ i[class^="fa"] {
   }
   
 }/*end media*/
-
-
-
-
 
 
 
