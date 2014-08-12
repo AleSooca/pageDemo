@@ -3,12 +3,12 @@
 describe('Directive: rating', function () {
 
   // load the directive's module
-  beforeEach(module('pageDemoApp'));
+  beforeEach(angular.mock.module('pageDemoApp'));
 
   var MainCtrl,
     scope;
 
-  beforeEach(inject(function ($controller, $rootScope) {
+  beforeEach(angular.mock.inject(function ($controller, $rootScope) {
     scope = $rootScope.$new();
     MainCtrl = $controller('MainCtrl', {
       $scope: scope
