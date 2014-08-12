@@ -27,7 +27,7 @@ angular.module('pageDemoApp')
     if(0 == $scope.previousSort)
       $scope.direction = !$scope.direction;
     $scope.previousSort = 0;
-    $scope.neverBeenRating = "beeh here"
+    $scope.neverBeenRating = "Heya!"
     $scope.ratingDirDown = ! $scope.ratingDirDown;
     $scope.nameDirDown = null;
   }

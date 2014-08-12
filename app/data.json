@@ -21,7 +21,7 @@
             ],
             "LogoUrl": "http://d30v2pzvrfyzpo.cloudfront.net/uk/images/restaurants/32596.gif",
             "ratings": {
-                "value": 4.5,
+                "value": 3.5,
                 "number": 10
             },
             "distance": "1 mile"
@@ -48,7 +48,7 @@
             "LogoUrl": "http://d30v2pzvrfyzpo.cloudfront.net/uk/images/restaurants/32428.gif",
             "ratings": {
                 "value": 4.5,
-                "number": 10
+                "number": 15
             },
             "distance": "1 mile"
         },
@@ -106,7 +106,7 @@
             "LogoUrl": "http://d30v2pzvrfyzpo.cloudfront.net/uk/images/restaurants/4344.gif",
             "ratings": {
                 "value": 4.5,
-                "number": 10
+                "number": 20
             },
             "distance": "1 mile"
         },
