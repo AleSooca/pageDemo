@@ -1,4 +1,4 @@
-/* Space out content a bit */
+
 body {
   padding-top: 20px;
   padding-bottom: 20px;
@@ -29,7 +29,8 @@ li {
 
 .filters input{
   max-width:400px;
-  min-width:330px;
+  min-width: 244px;
+  margin-bottom:5px;
 }
 
 .filters ul li{
@@ -43,6 +44,7 @@ li {
 .filterbox{
   border:1px solid #ccc;
   background-color:#dcdcdc;
+  height:95px;
 }
 
 /* Custom page header */
@@ -68,6 +70,7 @@ li {
   border-bottom: 1px solid #ccc;
   padding-bottom: 10px;
   padding-top: 10px;
+  margin-left:20px;
 }
 
 .border-row .col-md-2{
@@ -132,13 +135,11 @@ i[class^="fa"] {
   /* Space out the masthead */
   .header {
     margin-bottom: 30px;
-  }
-  /* Remove the bottom border on the rowlist for visual effect */
   
-
-  
+    
   font-family: 'FontAwesome' !important;
   font-size: inherit;
+  }
   
 }/*end media*/
 
