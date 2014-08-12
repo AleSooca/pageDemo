@@ -15,7 +15,7 @@ describe('Directive: rating', function () {
      });
   }));
 
-  it('should sort elements', inject(function ($compile) {
+  it('should sort elements [Restaurant Ratings]', inject(function ($compile) {
     var mockedArray = [
       {ratings:{
         number : 10
@@ -28,12 +28,35 @@ describe('Directive: rating', function () {
       }},
       {ratings:{
         number : 23
-      }},
+      }}
     ];
     scope.data = mockedArray;
-
+    $scope.toggleRatingSort();
     for(var i=0; i<3; i++){
       expect(scope.data[i].ratings.number).toBeGreater(scope.data[i+1].ratings.number);
+    }
+  }));
+
+   it('should sort elements [Names]', inject(function ($compile) {
+    var mockedArray = [
+      {
+        Name:"Alessio"
+      },
+      {
+        Name:"Paolo"
+      },
+      {
+        Name:"Francesco"
+      },
+      {
+        Name:"Jasmine"
+      }
+
+    ];
+    scope.data = mockedArray;
+    $scope.toggleNameSorting();
+    for(var i=0; i<3; i++){
+      expect(scope.data[i].Name).toBeGreater(scope.data[i+1].Name);
     }
   }));
 });

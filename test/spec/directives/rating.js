@@ -12,9 +12,11 @@ describe('Directive: rating', function () {
     scope = $rootScope.$new();
   }));
 
-  it('should make hidden element visible', inject(function ($compile) {
-    element = angular.element('<rating></rating>');
+  it('should return true', inject(function ($compile) {
+    element = angular.element('<div rating="4.5"></div>');
     element = $compile(element)(scope);
-    expect(element.text()).toBe('this is the rating directive');
+    expect(scope.rated(4)).toBe(true);
+    expect(scope.rated(5)).toBe(false);
+    expect(scope.half(4)).toBe(true);
   }));
 });
