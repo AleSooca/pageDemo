@@ -29,13 +29,13 @@ li {
 
 .filters input{
   max-width:400px;
-  min-width: 244px;
+  min-width: 242px;
   margin-bottom:5px;
 }
 
 .filters ul li{
   float:left;
-  margin-left:10px;
+  margin-left:8px;
 }
 .filters label{
   margin-top:10px;
@@ -45,7 +45,9 @@ li {
   border:1px solid #ccc;
   background-color:#dcdcdc;
   height:95px;
+  margin-left:15px;
 }
+
 
 /* Custom page header */
 .header {
@@ -139,6 +141,32 @@ i[class^="fa"] {
     
   font-family: 'FontAwesome' !important;
   font-size: inherit;
+  }
+  
+}/*end media*/
+
+/* Responsive: Portrait tablets and up */
+@media (max-width: 350px) {
+  /* Remove the padding we set earlier */
+  .header,
+  .footer {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+
+  .filters{
+    margin-left:-34px
+  }
+  /* Space out the masthead */
+  .header {
+    margin-bottom: 30px;
+  
+    
+  font-family: 'FontAwesome' !important;
+  font-size: inherit;
+
+
   }
   
 }/*end media*/
