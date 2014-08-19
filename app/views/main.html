@@ -1,11 +1,8 @@
 <div class="header">
-  <ul class="nav nav-pills pull-right">
-    <li class="active" data-ng-click="setActiveTab($event, 0)" data-ng-class="{ 'active': getActiveTab(0) }"><a ng-href="">List</a></li>
-    <li data-ng-click="setActiveTab($event, 1);" data-ng-class="{ 'active': getActiveTab(1) }"><a ng-href="">Map</a></li>
-  </ul>
+  <div tabs ></div>
   <img class="logo" src=""/><h3 class="text-muted">Demo Page</h3>
 </div>
-<div data-ng-if="getActiveTab(0);">
+<div id="first_tab" data-ng-if="getActiveTab(0);">
 <div class="row">
   <div class="col-sm-12 filterbox">
     <div class="form-group filters">
@@ -41,7 +38,7 @@
 </div>
 </div>
 
-<div data-ng-show="getActiveTab(1);">
+<div id="second_tab" data-ng-show="getActiveTab(1);">
    
     <div id="map"></div>
 

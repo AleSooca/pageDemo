@@ -6,13 +6,18 @@ describe('Directive: rating', function () {
   beforeEach(angular.mock.module('pageDemoApp'));
 
   var MainCtrl,
-    scope;
+    scope,
+    filter;
 
-  beforeEach(angular.mock.inject(function ($controller, $rootScope) {
+  beforeEach(angular.mock.inject(function ($controller, $rootScope, $filter) {
     scope = $rootScope.$new();
+    
     MainCtrl = $controller('MainCtrl', {
       $scope: scope
-     });
+      });
+
+   filter = $filter('orderBy');
+    
   }));
 
   it('should sort elements [Restaurant Ratings]', inject(function ($compile) {
@@ -31,9 +36,13 @@ describe('Directive: rating', function () {
       }}
     ];
     scope.data = mockedArray;
-    $scope.toggleRatingSort();
+ 
+    scope.toggleRatingSort();
+
+    scope.data = filter(scope.data, scope.ordering);    
+    
     for(var i=0; i<3; i++){
-      expect(scope.data[i].ratings.number).toBeGreater(scope.data[i+1].ratings.number);
+      expect(scope.data[i].ratings.number).toBeLessThan(scope.data[i+1].ratings.number);
     }
   }));
 
@@ -54,9 +63,10 @@ describe('Directive: rating', function () {
 
     ];
     scope.data = mockedArray;
-    $scope.toggleNameSorting();
+    scope.toggleNameSorting();
+    scope.data = filter(scope.data, scope.ordering);    
     for(var i=0; i<3; i++){
-      expect(scope.data[i].Name).toBeGreater(scope.data[i+1].Name);
+      expect(scope.data[i].Name).toBeLessThan(scope.data[i+1].Name);
     }
   }));
 });

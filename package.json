@@ -36,7 +36,8 @@
     "karma-ie-launcher": "~0.1.5",
     "karma-safari-launcher": "~0.1.1",
     "karma": "~0.12.21",
-    "protractor": "~1.0.0"
+    "protractor": "~1.0.0",
+    "grunt-angular-templates": "~0.5.7"
   },
   "engines": {
     "node": ">=0.8.0"
